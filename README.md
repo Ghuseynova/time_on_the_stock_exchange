@@ -1,6 +1,6 @@
 # Time on the stock exchange
 
-[I'm an inline-style link](Demo)
+[Demo](https://time-on-the-stock-exchange.netlify.app/)
 
 ## Installation
 
