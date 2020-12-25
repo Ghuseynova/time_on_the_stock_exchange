@@ -1,0 +1,241 @@
+.clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__tz {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 4rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.5s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    &.is-open {
+      display: flex;
+    }
+
+    &-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      transition: opacity 0.5s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    button {
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.5s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__analog {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    background: white;
+    border: 10px solid rgb(12, 51, 128);
+    border-radius: 100%;
+
+    .top {
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 3px;
+      height: 8px;
+      margin: 0 auto;
+      background: #262626;
+    }
+
+    .right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 8px;
+      height: 3px;
+      margin: auto 0;
+      background: #262626;
+    }
+
+    .bottom {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 3px;
+      height: 8px;
+      margin: 0 auto;
+      background: #262626;
+    }
+
+    .left {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 8px;
+      height: 3px;
+      margin: auto 0;
+      background: #262626;
+    }
+
+    .center {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      margin: auto;
+      background: #262626;
+      border-radius: 100%;
+    }
+
+    .shadow {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      width: 140px;
+      height: 140px;
+      background: linear-gradient(transparent, rgba(#000, 0.1));
+      transform: rotate(135deg);
+
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .hour {
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      margin: 0 auto;
+      //animation: time 86400s infinite linear;
+      animation: time 60s infinite linear;
+
+      &::before {
+        position: absolute;
+        top: 30px;
+        width: 3px;
+        height: 60px;
+        background: #262626;
+        content: '';
+      }
+    }
+
+    .minute {
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      margin: 0 auto;
+      //animation: time 3600s infinite linear;
+      animation: time 30s infinite linear;
+
+      &::before {
+        position: absolute;
+        top: 50px;
+        width: 1px;
+        height: 40px;
+        background: #262626;
+        content: '';
+      }
+    }
+
+    .second {
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      margin: 0 auto;
+      //animation: time 60s infinite linear;
+      animation: time 15s infinite linear;
+
+      &::before {
+        position: absolute;
+        top: 45px;
+        width: 2px;
+        height: 45px;
+        background: #fd1111;
+        content: '';
+      }
+    }
+  }
+}

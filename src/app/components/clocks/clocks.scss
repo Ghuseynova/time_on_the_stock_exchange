@@ -1,0 +1,45 @@
+.clocks {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &::after {
+      width: calc((100% - 20px) / 4);
+      content: '';
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: calc((100% - 20px) / 4);
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: 768px) {
+      width: calc(100% / 2);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 1rem 1.4rem;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1;
+    background-color: rgb(12, 51, 128);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
