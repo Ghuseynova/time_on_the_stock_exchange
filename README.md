@@ -1,4 +1,6 @@
-# Time on the stcok exchange
+# Time on the stock exchange
+
+[I'm an inline-style link](Demo)
 
 ## Installation
 
