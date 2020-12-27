@@ -21,8 +21,8 @@ const AnalogDisplay = ({ time, timezone, className }) => {
         className="minute"
         style={{
           transform: `rotate(${(
-            (date.getMinutes() / 60) *
-            360
+            (date.getMinutes() / 60) * 360 -
+            180
           ).toString()}deg)`,
         }}
       ></div>
@@ -30,8 +30,8 @@ const AnalogDisplay = ({ time, timezone, className }) => {
         className="second"
         style={{
           transform: `rotate(${(
-            (date.getSeconds() / 60) *
-            360
+            (date.getSeconds() / 60) * 360 -
+            180
           ).toString()}deg)`,
         }}
       ></div>

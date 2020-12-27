@@ -185,14 +185,12 @@
       width: 3px;
       height: 100%;
       margin: 0 auto;
-      //animation: time 86400s infinite linear;
-      animation: time 60s infinite linear;
 
       &::before {
         position: absolute;
         top: 30px;
         width: 3px;
-        height: 60px;
+        height: 45px;
         background: #262626;
         content: '';
       }
@@ -205,8 +203,6 @@
       width: 1px;
       height: 100%;
       margin: 0 auto;
-      //animation: time 3600s infinite linear;
-      animation: time 30s infinite linear;
 
       &::before {
         position: absolute;
@@ -225,8 +221,6 @@
       width: 2px;
       height: 100%;
       margin: 0 auto;
-      //animation: time 60s infinite linear;
-      animation: time 15s infinite linear;
 
       &::before {
         position: absolute;
